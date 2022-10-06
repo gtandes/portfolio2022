@@ -77,7 +77,7 @@ const Date = styled.span`
 const Container = styled(motion.div)``;
 
 // framer motion config
-const Item = {
+export const Item = {
 	hidden: { scale: 0 },
 	show: { scale: 1, transition: { type: 'spring', duration: 0.5 } },
 };

@@ -9,6 +9,8 @@ import ParticleComponent from '../subcomponents/ParticleComponent';
 import dog from '../assets/Images/spaceman.png';
 import { Contact, fadeInSlowly } from './MainPage';
 import mail from '../assets/Images/icons8-mail-64.png';
+import { Item } from './Web3Card';
+import { container } from './Web3Page';
 
 const Box = styled.div`
 	background-color: ${(props) => props.theme.body};
@@ -18,7 +20,7 @@ const Box = styled.div`
 	overflow: hidden;
 `;
 
-const Main = styled.div`
+const Main = styled(motion.div)`
 	position: absolute;
 	top: 10rem;
 	left: calc(5rem + 5vw);
@@ -82,10 +84,16 @@ const Dog = styled.div`
 	}
 `;
 
+// framer
+const item = {
+	hidden: { opacity: 0 },
+	show: { opacity: 1 },
+};
+
 const About = () => {
 	return (
 		<ThemeProvider theme={darkTheme}>
-			<Box>
+			<Box variants={container} initial='hidden' animate='show' exit='exit'>
 				<ParticleComponent theme='dark' />
 				<LogoComponent theme='dark' />
 				<SocialIcons theme='dark' />
@@ -109,25 +117,27 @@ const About = () => {
 					<img src={dog} alt='dog' />
 				</Dog>
 
-				<Main>
-					<div>
-						I am currently a freelance web developer in the Philippines who
-						loves this line of work. To me, web development is simply
-						forever-lasting art with functionality under a layer of security.{' '}
-						<br />
-						<br /> I am interested in all things related to technology, and more
-						so those involving the blockchain and cryptocurrencies, which is why
-						I am currently focusing more on related languages like Solidity.{' '}
-						<br />
-						<br />
-						You can connect with me via social links or by clicking on the email
-						icon on the top right corner. <br />
-						<br />
+				<div variants={item}>
+					<Main variants={Item} initial='hidden' animate='show'>
 						<div>
-							<i>"Fly me to the moon. Let me play among the stars"</i>
+							I am currently a freelance web developer in the Philippines who
+							loves this line of work. To me, web development is simply
+							forever-lasting art with functionality under a layer of security.{' '}
+							<br />
+							<br /> I am interested in all things related to technology, and
+							more so those involving the blockchain and cryptocurrencies, which
+							is why I am currently focusing more on related languages like
+							Solidity. <br />
+							<br />
+							You can connect with me via social links or by clicking on the
+							email icon on the top right corner. <br />
+							<br />
+							<div>
+								<i>"Fly me to the moon. Let me play among the stars"</i>
+							</div>
 						</div>
-					</div>
-				</Main>
+					</Main>
+				</div>
 			</Box>
 		</ThemeProvider>
 	);

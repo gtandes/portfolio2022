@@ -79,7 +79,7 @@ const Rotate = styled.span`
 `;
 
 // framer motion config
-const container = {
+export const container = {
 	hidden: { opacity: 0 },
 	show: {
 		opacity: 1,
