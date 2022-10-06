@@ -39,12 +39,12 @@ const Main = styled.div`
 	justify-content: center;
 
 	@media (max-width: 768px) {
-		height: 80vh;
+		height: 70vh;
 		width: 65vw;
 		top: 7rem;
 		left: calc(5rem + 4vw);
-		font-size: calc(1rem + 1.5vw);
-		line-height: 1.6;
+		font-size: calc(0.9rem + 1.1vw);
+		line-height: 1.5;
 	}
 
 	@media (max-width: 480px) {
@@ -54,6 +54,12 @@ const Main = styled.div`
 		left: calc(5rem + 4vw);
 		font-size: calc(0.8rem + 1vw);
 		line-height: 1.5;
+	}
+
+	@media (max-width: 380px) {
+		line-height: 1.5;
+		width: 60vw;
+		left: 3.5rem;
 	}
 `;
 

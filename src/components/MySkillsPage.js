@@ -40,6 +40,12 @@ const Box = styled.div`
 	@media (max-width: 768px) {
 		height: 175vh;
 	}
+	@media (max-width: 480px) {
+		height: 145vh;
+	}
+	@media (max-width: 380px) {
+		height: 155vh;
+	}
 `;
 
 const Grid = styled(motion.div)`
@@ -86,6 +92,16 @@ const Main = styled.div`
 		width: 50vw;
 		font-size: calc(1em + 1vw);
 	}
+
+	@media (max-width: 480px) {
+		height: 29rem;
+	}
+
+	@media (max-width: 380px) {
+		font-size: calc(1em + 1vw);
+		height: 30rem;
+		padding-bottom: 4rem;
+	}
 `;
 
 const Title = styled.h2`
@@ -109,37 +125,63 @@ const Title = styled.h2`
 const Description = styled.div`
 	color: ${(props) => props.theme.text};
 	font-size: calc(0.6em + 1vw);
-	padding: 0.5rem 0;
+	padding: 0.75rem 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: justify;
 
 	strong {
-		/* margin-bottom: 1rem; */
 		text-transform: uppercase;
+	}
+
+	@media (max-width: 480px) {
+		font-size: calc(0.6em + 0.5vw);
+		padding: 0rem 0;
+
+		strong {
+			display: none;
+		}
 	}
 `;
 
 const SkillIconsContainer = styled.div`
 	display: grid;
-	height: 15vh;
+	height: 13.5vh;
 	width: 100%;
 	align-items: center;
 	justify-content: center;
-	/* padding-bottom: 0.5rem; */
 
 	grid-template-columns: repeat(4, minmax(calc(3rem + 3vw), 1fr));
 	grid-gap: calc(0.5rem + 1vw);
+
+	@media (max-width: 768px) {
+		transform: translateX(3%);
+	}
+
+	@media (max-width: 480px) {
+		grid-template-columns: repeat(2, minmax(calc(3rem + 3vw), 1fr));
+		padding: 1rem 0;
+		transform: translateX(10%);
+	}
+
+	@media (max-width: 380px) {
+		padding: 0.75rem 0;
+		padding-bottom: 1.5rem;
+		transform: translateX(4%);
+	}
 `;
 
 const SkillIconsCard = styled.div`
-	height: 120px;
-	width: 120px;
+	width: calc(1rem + 6vw);
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 
 	& > img {
-		height: 70px;
-		width: 70px;
+		width: calc(0.75rem + 3vw);
 	}
 
 	@media (max-width: 768px) {
@@ -149,6 +191,27 @@ const SkillIconsCard = styled.div`
 		& > img {
 			height: 50px;
 			width: 50px;
+		}
+	}
+
+	@media (max-width: 480px) {
+		height: 60px;
+		width: 60px;
+
+		& > img {
+			height: 50px;
+			width: 50px;
+		}
+
+		@media (max-width: 380px) {
+			padding: 0.5rem;
+			height: 50px;
+			width: 60px;
+
+			& > img {
+				height: 50px;
+				width: 50px;
+			}
 		}
 	}
 `;
@@ -196,7 +259,7 @@ const MySkillsPage = () => {
 						</Description>
 
 						<Description>
-							<strong>Languages & Frameworks</strong>
+							<strong>Lang & Frameworks</strong>
 							<SkillIconsContainer>
 								<SkillIconsCard>
 									<img src={framer} alt='email icon' />
@@ -249,7 +312,7 @@ const MySkillsPage = () => {
 						</Description>
 
 						<Description>
-							<strong>Languages & Frameworks</strong>
+							<strong>Lang & Frameworks</strong>
 							<SkillIconsContainer>
 								<SkillIconsCard>
 									<img src={nodejs} alt='email icon' />

@@ -26,11 +26,14 @@ const Icons = styled(motion.div)`
 	}
 
 	@media (max-width: 768px) {
-		left: 1.5rem;
+		left: 1rem;
 	}
 	@media (max-width: 480px) {
 		left: 0.75rem;
 	}
+	/* @media (max-width: 380px) {
+		left: 0.5rem;
+	} */
 `;
 
 const Line = styled(motion.span)`

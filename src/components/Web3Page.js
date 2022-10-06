@@ -61,10 +61,13 @@ const Rotate = styled.span`
 	width: 120px;
 	height: 120px;
 
-	@media (max-width: 768px) {
+	@media (max-width: 1200px) {
+		/* display: none; */
+
 		.smallscreen {
-			height: 60px;
+			/* display: none; */
 			width: 60px;
+			height: 60px;
 		}
 
 		width: 60px;
@@ -72,10 +75,6 @@ const Rotate = styled.span`
 
 		right: 2rem;
 		bottom: 3rem;
-	}
-
-	@media (max-width: 480px) {
-		display: none;
 	}
 `;
 

@@ -27,6 +27,10 @@ const Box = styled(motion(NavLink))`
 	@media (max-width: 768px) {
 		width: calc(10rem + 40vw);
 	}
+
+	@media (max-width: 380px) {
+		width: 60vw;
+	}
 `;
 
 const Image = styled.div`
@@ -57,10 +61,13 @@ const Title = styled.h3`
 
 const HashTags = styled.div`
 	padding: 0.5rem 0;
+	white-space: normal;
 `;
 
 const Tag = styled.span`
 	padding-right: 0.5rem;
+	white-space: normal;
+	word-wrap: break-word;
 `;
 
 const Date = styled.span`

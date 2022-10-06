@@ -4,6 +4,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import Me from '../assets/Images/profile-img.png';
+import Me2 from '../assets/Images/zzz.png';
 
 const Box = styled(motion.div)`
 	position: absolute;
@@ -42,13 +43,32 @@ const SubBox = styled.div`
 	position: relative;
 	display: flex;
 
-	.pic {
+	.pic,
+	.pic2 {
 		position: absolute;
 		bottom: 0;
 		left: 50%;
 		transform: translate(-50%, 0);
 		width: 70%;
 		height: auto;
+	}
+
+	.pic2 {
+		display: none;
+	}
+
+	@media (max-width: 480px) {
+		.pic,
+		.pic2 {
+			width: 100%;
+		}
+
+		.pic2 {
+			top: 0;
+			display: inline-block;
+			/* bottom: 0; */
+			transform: translate(-50%, 0%);
+		}
 	}
 `;
 
@@ -65,6 +85,10 @@ const Text = styled.div`
 		color: ${(props) => `rgba(${props.theme.bodyRgba},0.6)`};
 		font-size: calc(0.5em + 1.5vw);
 		font-weight: 300;
+	}
+
+	@media (max-width: 380px) {
+		padding: 0.5rem;
 	}
 `;
 
@@ -88,6 +112,13 @@ const Intro = () => {
 					animate={{ opacity: 1 }}
 					transition={{ duration: 1, delay: 2 }}>
 					<img src={Me} alt='profile picture' className='pic' />
+				</motion.div>
+
+				<motion.div
+					initial={{ opacity: 0 }}
+					animate={{ opacity: 1 }}
+					transition={{ duration: 1, delay: 2 }}>
+					<img src={Me2} alt='profile picture' className='pic2' />
 				</motion.div>
 			</SubBox>
 		</Box>
