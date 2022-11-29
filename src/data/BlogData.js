@@ -56,4 +56,14 @@ export const Blogs = [
 			'https://i.postimg.cc/W1qdXTsh/Screenshot-from-2022-11-18-17-22-03.png',
 		link: 'https://gta-nft-cardbattle.vercel.app/',
 	},
+
+	{
+		id: 7,
+		name: 'CryptoScreener',
+		tags: ['reactJS', 'tailwindcss', 'CoinGecko API'],
+		date: 'December 2022',
+		imgSrc:
+			'https://i.postimg.cc/vmmJqZTf/Screenshot-from-2022-11-30-07-23-54.png',
+		link: 'https://gta-cryptoscreener.vercel.app/bitcoin',
+	},
 ];
