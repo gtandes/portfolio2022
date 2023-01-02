@@ -66,4 +66,14 @@ export const Blogs = [
 			'https://i.postimg.cc/vmmJqZTf/Screenshot-from-2022-11-30-07-23-54.png',
 		link: 'https://gta-cryptoscreener.vercel.app/bitcoin',
 	},
+
+	{
+		id: 8,
+		name: 'Crowdfunding',
+		tags: ['reactJS', 'tailwindcss', 'solidity', 'thirdweb', 'ethers'],
+		date: 'January 2023',
+		imgSrc:
+			'https://i.postimg.cc/hPVZccnd/317303149-712432587133164-2424521967436360460-n.png',
+		link: 'https://crypto-crowdfunding-mu2w.vercel.app/',
+	},
 ];
